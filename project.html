@@ -4,41 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sayHello</title>
+    <title>Project</title>
     <link rel="stylesheet" href="project.css">
 </head>
 
 <body>
 
-    <div class="calculator">
-        <h3>This is a greeting calculator. Click any name to sayHello and sayGoodbye!</h3>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                Hi There!</div>
+            <form action="#">
+                <div class="field">
+                    <input id="text">
+                    <label>Your Name</label>
+                </div>
 
-        <form id="myForm" action="/action_page.php">
-            First name: <input type="text" name="fname"><br>
-            <input type="button" onclick="myFunction()" value="Submit form">
-        </form>
-        <div class="calculator__display">0</div>
-        <div class="calculator__keys">
-            <button class="key--operator" data-action="add">+</button>
-            <button class="key--operator" data-action="subtract">-</button>
-            <button class="key--operator" data-action="multiply">&times;</button>
-            <button class="key--operator" data-action="divide">÷</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>0</button>
-            <button data-action="decimal">.</button>
-            <button data-action="clear">AC</button>
-            <button class="key--equal" data-action="calculate">=</button>
+                <div class="field">
+                    <input onclick="sayHi()" type="submit" value="Submit">
+                </div>
+            </form>
         </div>
-    </div>
-    <script src="project.js"></script>
-</body>
+        <script src="project.js"></script>
+    </body>
 
 </html>
