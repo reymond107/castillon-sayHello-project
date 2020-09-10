@@ -1,185 +1,152 @@
-html {
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
+html,
 body {
-    margin: 0;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #f2f2f2;
+    /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
 
-
-/* Responsive Images */
-
-embed,
-iframe,
-img,
-object,
-video {
-    max-width: 100%;
+::selection {
+    background: #4158d0;
+    color: #fff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-li,
-p,
-pre,
-blockquote,
-figure,
-hr {
-    margin: 0;
-    padding-right: 0;
-    padding-left: 0;
+.wrapper {
+    width: 380px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    text-decoration: none;
+.wrapper .title {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
-a:focus {
+.wrapper form {
+    padding: 10px 30px 50px 30px;
+}
+
+.wrapper form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.wrapper form .field input {
+    height: 100%;
+    width: 100%;
     outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    display: block;
+.wrapper form .field input:focus,
+form .field input:valid {
+    border-color: #4158d0;
 }
 
-
-/* Removes all decimals and discs from lists */
-
-ol,
-ul {
-    list-style: none;
+.wrapper form .field label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #999999;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
 }
 
-
-/* 
-   * Completely resets form items
-   * ----------------------------
-   * Super hard reset that removes all borders
-   * and radiuses of all form items (including
-   * checkboxes and radios)
-   */
-
-input,
-textarea,
-button {
-    border: 0;
-    border-radius: 0;
-    background-color: transparent;
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    outline: none;
-    appearance: none;
-    text-align: left;
+form .field input:focus~label,
+form .field input:valid~label {
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
 }
 
-input:hover,
-input:active,
-input:focus,
-textarea:hover,
-textarea:active,
-textarea:focus,
-button:hover,
-button:active,
-button:focus {
-    outline: none;
-}
-
- :root {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-html {
-    font-size: 175%;
-    font-weight: 300;
-    line-height: 1.3;
-}
-
-body {
-    align-items: center;
-    background-image: linear-gradient(236deg, #74ebd5, #acb6e5);
+form .content {
     display: flex;
-    height: 100vh;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form .content .checkbox {
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.container {
-    max-width: 20em;
+form .content input {
+    width: 15px;
+    height: 15px;
+    background: red;
 }
 
-.container>p {
-    text-align: center;
+form .content label {
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
 }
 
-.calculator {
-    border-radius: 12px;
-    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    max-width: 15em;
-    overflow: hidden;
+form .content .pass-link {
+    color: "";
 }
 
-.calculator__display {
-    background-color: #222222;
+form .field input[type="submit"] {
     color: #fff;
-    font-size: 1.714285714em;
-    padding: 0.5em 0.75em;
-    text-align: right;
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease;
 }
 
-.calculator__keys {
-    background-color: #999;
-    display: grid;
-    grid-gap: 1px;
-    grid-template-columns: repeat(4, 1fr);
+form .field input[type="submit"]:active {
+    transform: scale(0.95);
 }
 
-.calculator__keys>* {
-    background-color: #fff;
-    padding: 0.5em 1.25em;
-    position: relative;
+form .signup-link {
+    color: #262626;
+    margin-top: 20px;
     text-align: center;
 }
 
-.calculator__keys>*:active::before,
-.calculator__keys>.is-depressed::before {
-    background-color: rgba(0, 0, 0, 0.2);
-    bottom: 0;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
-    content: "";
-    left: 0;
-    opacity: 0.3;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+form .pass-link a,
+form .signup-link a {
+    color: #4158d0;
+    text-decoration: none;
 }
 
-.key--operator {
-    background-color: #eee;
-}
-
-.key--equal {
-    background-image: linear-gradient(to bottom, #fe886a, #ff7033);
-    grid-column: -2;
-    grid-row: 2 / span 4;
+form .pass-link a:hover,
+form .signup-link a:hover {
+    text-decoration: underline;
 }
