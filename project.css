@@ -17,11 +17,18 @@ body {
 }
 
 ::selection {
-    background: #4158d0;
+    background: #9cffff;
     color: #fff;
 }
 
 .wrapper {
+    width: 380px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container {
     width: 380px;
     background: #fff;
     border-radius: 15px;
@@ -36,7 +43,7 @@ body {
     color: #fff;
     user-select: none;
     border-radius: 15px 15px 0 0;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: #21d6af;
 }
 
 .wrapper form {
@@ -90,7 +97,7 @@ form .field input:valid~label {
 form .content {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 70px;
     font-size: 16px;
     align-items: center;
     justify-content: space-around;
@@ -126,7 +133,7 @@ form .field input[type="submit"] {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: #21d6af;
     transition: all 0.3s ease;
 }
 
@@ -134,19 +141,10 @@ form .field input[type="submit"]:active {
     transform: scale(0.95);
 }
 
-form .signup-link {
-    color: #262626;
-    margin-top: 20px;
-    text-align: center;
+#text {
+    padding-right: 20px;
 }
 
-form .pass-link a,
-form .signup-link a {
-    color: #4158d0;
-    text-decoration: none;
-}
-
-form .pass-link a:hover,
-form .signup-link a:hover {
-    text-decoration: underline;
+#nameKeys1 {
+    padding-right: 30px;
 }
