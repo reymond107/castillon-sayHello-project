@@ -10,21 +10,34 @@
 
 <body>
 
-    <body>
+    <body class="sayHiApp">
         <div class="wrapper">
-            <div class="title">
-                Hi There!</div>
+            <div class="title" type="text" id="name"> Hi There! </div>
             <form action="#">
                 <div class="field">
-                    <input id="text">
+                    <input id="text" type="search">
                     <label>Your Name</label>
                 </div>
 
                 <div class="field">
                     <input onclick="sayHi()" type="submit" value="Submit">
                 </div>
+
+                <div id="nameKeys">
+                    <button>Bob</button>
+                    <button>Joe</button>
+                    <button>Rob</button>
+                    <button>Dan</button>
+                    <button>Ric</button>
+                    <button>Rod</button>
+                </div>
+                <div class="button-div">
+                    <button id="hello">Hello</button>
+                    <button id="goodbye">Good bye</button>
+                </div>
             </form>
         </div>
+
         <script src="project.js"></script>
     </body>
 
